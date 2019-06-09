@@ -1,19 +1,19 @@
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app():
     app = Flask(__name__)
 
     @app.route('/')
     def homepage():
-        return 'This is the homepage'
+        return render_template('homepage.html')
 
     @app.route('/about/')
     def about():
-        return 'This is the about page'
+        return render_template('about.html')
 
     @app.route('/hello/')
     @app.route('/hello/<name>')
     def hello(name='diallo'):
-        return 'Hello {}!'.format(name.capitalize())
+        return render_template('hello.html', name=name)
 
     return app
