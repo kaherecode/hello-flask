@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-    <meta charset="utf-8">
-</head>
-<body>
-    <h1>Welcome to my website made with Flask.</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}<h1>Welcome to my website made with Flask.</h1>{% endblock %}
